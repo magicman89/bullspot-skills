@@ -19,8 +19,21 @@ bullspot_agent: Penny
 3. Self-Improving - Auto-learns from mistakes over time
 
 ## Tools
-- Resend API: re_U3Rf2Zuo_98q6Z2MJ6Do73jgnNxCwAvVr
+- Resend API: Use RESEND_API_KEY environment variable (do NOT hardcode)
 - Supabase: vwizzzmcescljw
+
+## Sending Emails via Resend API
+```bash
+curl -X POST "https://api.resend.com/emails" \
+  -H "Authorization: Bearer $RESEND_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "from": "Bullspot <onboarding@resend.dev>",
+    "to": ["recipient@example.com"],
+    "subject": "Subject line",
+    "html": "<p>Email body</p>"
+  }'
+```
 
 ## Email List Segmentation
 | Segment | Content Focus |
