@@ -28,7 +28,7 @@ curl -X POST "https://api.resend.com/emails" \
   -H "Authorization: Bearer $RESEND_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "from": "Bullspot <onboarding@resend.dev>",
+    "from": "Bullspot <support@bullspot.app>",
     "to": ["recipient@example.com"],
     "subject": "Subject line",
     "html": "<p>Email body</p>"
